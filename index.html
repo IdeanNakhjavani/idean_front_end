@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <main>
+    <header class="header">
+      <link rel="stylesheet" href="wikistyle.css">
+      <h2>Global Airport Search</h2>
+      <h6>Powered by Wikipedia</h6>
+      <br>
+      <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/657px-Wikipedia-logo-v2.svg.png" alt="Wikipedia Logo" style="width:150px;height:150px;">
+
+      <form class="search-form js-search-form">
+        <input placeholder="Enter your 3-letter airport code" type="search" class="search-input js-search-input" maxlength = "3" min = "0" autofocus />
+        <script src="wikiscript.js"></script>
+      </form>
+    </header>
+  <body>
+  </body>
+    <div class="loading-indicator">
+      <div class="sk-chase js-spinner hidden">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+    </div>
+    <section class="search-results js-search-results"></section>
+  </main>
+</html>

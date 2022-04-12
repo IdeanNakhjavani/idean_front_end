@@ -1,0 +1,18 @@
+Updated README
+
+On top of the previous implementation of Travel Bot V1, this new version includes the addition of two new APIs: the Wikipedia API and a Google Static Maps API.
+
+Wikipedia API: https://en.wikipedia.org/api/rest_v1/
+Google Static Maps API: https://developers.google.com/maps/documentation/maps-static
+
+Due to some errors, these APIs are not able to run seamlessly with the specific chatting feature of the travelbot, but when running main.html, the functioning APIs are always available for use centred at the top of the display underneath the title, each with corresponding buttons labelled "Search your airport on Wikipedia!" and "See your airport on Google Maps!", respectively.
+
+Information on files:
+
+index.html: The first of these buttons contains a hyperlink to the index.html file, which contains the Wikipedia API. Upon opening index.html, the user is able to enter up to 3 characters to search for anything, although the indended use is for a 3 letter IATA airport code. The search results are limited to just one result, simplifying the process of being overloaded with too many search results. For example, when searching "YVR", clicking on the first result should direct the user to the actual Wikipedia article for the Vancouver International Airport.
+
+mapindex.html: The second of the two buttons contains a hyperlink to the mapindex.html file, which contains the Google Static Maps API. Upon opening mapindex.html, the user is greeted with a blue page with various details. The first text box is a prompt for the 3 letter IATA airport code, and the second text bos is for the airport's city. Below these are the zoom controls, which allow the user to select a zoom level for the map. Below these are two text boxes that allow the user to specify the map size in height and width pixel dimensions. The last three radio options are the map view options, which allow the user to specify if they would like the map displayed in a Roadmap, Satellite, or Hybrid view. Finally, the large red "Retrieve Map" button gets all the user-inputted information and aggregates it into a URL that works with my personal Google Maps API key. However, this feature is not functioning properly and it does not pull a proper image to the webpage. A small image icon placeholder is visible after pressing the red button, but other than the final map image not being displayed, the rest of this API works properly.
+
+main.html: This is the file needed to start the whole chatbot page. This is essentially unchanged from before (Assignment 3), with the exception of adding a new div (class = "vertical-center") which contains the two new buttons featuring the Wikipedia API and Google Static Maps API (changes are from line 37-44). Opening main.html greets the user with a blue page with "Flight Finder V2", our slogan, and the two API buttons placed on the top and centre of the page. Ideally, the text box should allow the user to speak with the chat bot, but due to some errors, the chat bot only repeats your text entry back to the user. However, the API buttons are always visible at the top of the display.
+
+wikiscript.js: Using the entered airport code from index.html, the search query communicates with the Wikipedia API, and the result (limited to just one result) is returned to the user at the index.html page. This wikiscript.js file is essentially the brains of the index.html file, and allows the search query to operate through Wikipedia's online encyclopedia.
